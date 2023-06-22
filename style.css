@@ -40,7 +40,6 @@ body * {
     width: 360px;
     margin: 56px auto 0px auto;
     padding: 0px 24px;
-    border: 1px solid red
     ;
 }
 
@@ -56,9 +55,8 @@ body * {
     padding: 24px;
 }
 #profile img /* DIV É UM ELEMENTO BLOCK E IMG É UM ELEMENTO INLINE( LINHA DO LADO DO OUTRO,ou seja em elementos inline não consigo aplicar margin auto*/{
-    width: 250px; 
-    border:1px solid red;  
-    font-size: 42px;
+    width: 101px; 
+    font-size: 25px;
     margin: auto;
 }
 #profile p{

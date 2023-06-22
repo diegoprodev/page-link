@@ -10,12 +10,12 @@ function toggleMode() {
 
         /* usar condições, se tiver em light add img light usando o set atriburte*/
 
-        img.setAttribute("src",  "./assets/Diego-Light.png")
+        img.setAttribute("src",  "./assets/light-diego.png")
         img.setAttribute("alt",  "diego usando oculos")
     } 
         /* caso não tenha o light mode. manter a imagem padrão*/
     else 
-        img.setAttribute("src", "./assets/Diego-Dark.png") 
+        img.setAttribute("src", "./assets/dark-diego.png") 
         img.setAttribute("alt",  "diego top dev")
 
 
