@@ -1,0 +1,170 @@
+:root {
+    --text-color: white;  
+    --bg-url: url(assets/bg-blue-desk.png);  
+    --stroke-color: solid rgba(255, 255, 255, 0.5) ;
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover:  rgba(255, 255, 255, 0.02);
+    --footersocial-hover:  rgba(255, 255, 255, 0.2);
+    --switch-url: url(./assets/moon-stars.svg)  ;
+    
+    
+}
+.light {
+    --text-color: black;
+    --bg-url: url(./assets/bg-mobile-light.jpeg);
+    --stroke-color: solid black;  
+    --surface-color:  rgba(0, 0, 0, 0.08);
+    --surface-color-hover:  rgba(0, 0, 0, 0.02);
+    --footersocial-hover: rgba(0, 0, 0, 0.150);
+    --switch-url: url(./assets/sun-stars.svg);
+    
+    
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+
+    background: var(--bg-url)  no-repeat top center/cover ;
+}
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+/* no css não precisa colocar altura, a altura tem que ser fluid devido a rolagem e o mobile, pos ela segue o conteudo da pagina*/
+#container {
+    width: 360px;
+    margin: 56px auto 0px auto;
+    padding: 0px 24px;
+    border: 1px solid red
+    ;
+}
+
+/*#profile{
+    text-align: center;
+ uma outra dica de alinhas pelo pai e filho pelo text align
+}*/
+
+/*profile*/
+
+#profile {
+    text-align: center;
+    padding: 24px;
+}
+#profile img /* DIV É UM ELEMENTO BLOCK E IMG É UM ELEMENTO INLINE( LINHA DO LADO DO OUTRO,ou seja em elementos inline não consigo aplicar margin auto*/{
+    width: 250px; 
+    border:1px solid red;  
+    font-size: 42px;
+    margin: auto;
+}
+#profile p{
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 10px auto;
+    padding: 0px;
+
+} 
+/*swtich*/
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-url) no-repeat center;
+    border: 0px;
+    border-radius: 50%;
+
+    /* posicionando o btn */
+    position: absolute;
+    top: 50%;
+    left: 0; /*  se fossemos alinhar horizontalmente usariamos o trasnlate x e right ou left */
+    z-index: 1;
+    transform: translateY(-50%); /* movimenta o elemento para cima ou para baixo, A ESTRATEGIA É TIRAR 50% NEGATIVO PRA CIMA DEPOIS ALINHAR COM O TOP 50% POSITIVO  -50% UTILIZA METADE DA CAIXA 50% PARA CIMA -*/
+}
+
+.light #switch button {
+    border: 1px solid  black;
+    right: 0; 
+    left: initial;
+    
+}
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+/* links */
+ul {
+    list-style: none;
+    display: flex ;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0px 0;
+}
+ul li a {
+  border: 1px solid var(--stroke-color);
+  display: flex;
+  justify-content: center; /* alinha o conteudo ao centro vertical meio da tela*/
+  align-items: center; /*alinha o texto/itens no centro da caixa passando ao meio horizantal da caixa*/
+  padding: 16px 24px;
+  background:var(--surface-color); /* 255 tudo significa branco com transparencia(0.1)*/
+  border-radius: 10px;
+  backdrop-filter: blur(4px); /* verifique no site caniuse.com alumas propriedades css*/
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;/*fonte acima de 400 é bold ou vc podeadd o tamanho*/
+  transition: background 0.9s;
+
+
+}
+ul li a:hover {
+    background: var(--surface-color-hover);
+    border: 1px solid var(--text-color);
+}
+/* social links*/
+#social-links {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0      ;  
+    font-size: 36px;
+}
+#social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 50%;
+    transition: background 0.8s;
+
+}
+#social-links a:hover {
+    background: var(--footersocial-hover);
+}
+footer  {
+    padding: 24px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+    transition: 1s;
+}
+
+footer a:hover {
+    background:var(--footersocial-hover);
+    border-radius: 10%;
+}
