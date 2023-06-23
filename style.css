@@ -1,26 +1,27 @@
 :root {
-    --text-color: white;  
-    --bg-url: url(assets/bg-blue-desk.png);  
+    --border-li-hover: rgb(168, 110, 201);
+    --text-color: rgb(255, 255, 255);  
+    --bg-url: url(assets/bg-new.jpg);  
     --stroke-color: solid rgba(255, 255, 255, 0.5) ;
     --surface-color: rgba(255, 255, 255, 0.05);
-    --surface-color-hover:  rgba(255, 255, 255, 0.02);
+    --surface-color-hover:  rgba(227, 12, 12, 0.02);
     --footersocial-hover:  rgba(255, 255, 255, 0.2);
     --switch-url: url(./assets/moon-stars.svg)  ;
     
     
 }
 .light {
+    --border-li-hover: black ;
     --text-color: black;
-    --bg-url: url(./assets/bg-mobile-light.jpeg);
+    --bg-url: url(./assets/bg-white.png);
     --stroke-color: solid black;  
     --surface-color:  rgba(0, 0, 0, 0.08);
     --surface-color-hover:  rgba(0, 0, 0, 0.02);
-    --footersocial-hover: rgba(0, 0, 0, 0.150);
+    --footersocial-hover: rgba(0, 0, 0, 0.100);
     --switch-url: url(./assets/sun-stars.svg);
     
     
 }
-
 
 * {
     margin: 0;
@@ -37,7 +38,8 @@ body * {
 }
 /* no css não precisa colocar altura, a altura tem que ser fluid devido a rolagem e o mobile, pos ela segue o conteudo da pagina*/
 #container {
-    width: 360px;
+    width: 100%;
+    max-width: 580px;
     margin: 56px auto 0px auto;
     padding: 0px 24px;
     ;
@@ -113,24 +115,24 @@ ul {
     padding: 0px 0;
 }
 ul li a {
-  border: 1px solid var(--stroke-color);
-  display: flex;
-  justify-content: center; /* alinha o conteudo ao centro vertical meio da tela*/
-  align-items: center; /*alinha o texto/itens no centro da caixa passando ao meio horizantal da caixa*/
-  padding: 16px 24px;
-  background:var(--surface-color); /* 255 tudo significa branco com transparencia(0.1)*/
-  border-radius: 10px;
-  backdrop-filter: blur(4px); /* verifique no site caniuse.com alumas propriedades css*/
-  -webkit-backdrop-filter: blur(4px);
-  text-decoration: none;
-  font-weight: 500;/*fonte acima de 400 é bold ou vc podeadd o tamanho*/
-  transition: background 0.9s;
+    border: 1px solid var(--stroke-color);
+    display: flex;
+    justify-content: center; /* alinha o conteudo ao centro vertical meio da tela*/
+    align-items: center; /*alinha o texto/itens no centro da caixa passando ao meio horizantal da caixa*/
+    padding: 16px 24px;
+    background:var(--surface-color); /* 255 tudo significa branco com transparencia(0.1)*/
+    border-radius: 10px;
+    backdrop-filter: blur(4px); /* verifique no site caniuse.com alumas propriedades css*/
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500;/*fonte acima de 400 é bold ou vc podeadd o tamanho*/
+    transition: background 0.9s;
 
 
 }
 ul li a:hover {
     background: var(--surface-color-hover);
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--border-li-hover);
 }
 /* social links*/
 #social-links {
