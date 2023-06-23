@@ -1,7 +1,7 @@
 :root {
     --border-li-hover: rgb(168, 110, 201);
     --text-color: rgb(255, 255, 255);  
-    --bg-url: url(assets/bg-new.jpg);  
+    --bg-url: url(assets/bg-mb-dark.jpg);  
     --stroke-color: solid rgba(255, 255, 255, 0.5) ;
     --surface-color: rgba(255, 255, 255, 0.05);
     --surface-color-hover:  rgba(227, 12, 12, 0.02);
@@ -13,7 +13,7 @@
 .light {
     --border-li-hover: black ;
     --text-color: black;
-    --bg-url: url(./assets/bg-white.png);
+    --bg-url: url(assets/bg-mb-light.jpg);
     --stroke-color: solid black;  
     --surface-color:  rgba(0, 0, 0, 0.08);
     --surface-color-hover:  rgba(0, 0, 0, 0.02);
@@ -47,7 +47,7 @@ body * {
 
 /*#profile{
     text-align: center;
- uma outra dica de alinhas pelo pai e filho pelo text align
+    uma outra dica de alinhas pelo pai e filho pelo text align
 }*/
 
 /*profile*/
@@ -167,4 +167,13 @@ footer a {
 footer a:hover {
     background:var(--footersocial-hover);
     border-radius: 10%;
+}
+
+@media (min-width: 700px){
+    :root {
+        --bg-url: url(assets/bg-desk-dark.jpg);
+    }
+    .light {
+        --bg-url: url(assets/bg-desk-white.jpg);
+    }
 }
