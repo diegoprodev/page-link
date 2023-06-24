@@ -87,13 +87,17 @@ body * {
     left: 0; /*  se fossemos alinhar horizontalmente usariamos o trasnlate x e right ou left */
     z-index: 1;
     transform: translateY(-50%); /* movimenta o elemento para cima ou para baixo, A ESTRATEGIA É TIRAR 50% NEGATIVO PRA CIMA DEPOIS ALINHAR COM O TOP 50% POSITIVO  -50% UTILIZA METADE DA CAIXA 50% PARA CIMA -*/
+    animation: slide-back 0.6s;
 }
 
 .light #switch button {
     border: 1px solid  black;
-    right: 0; 
-    left: initial;
+    animation: slide-in 0.8s forwards;
     
+}
+#switch button:hover {
+    outline: 8px solid var(--footersocial-hover);
+    transition-duration: 0.4s;
 }
 #switch span {
     display: block;
@@ -175,5 +179,23 @@ footer a:hover {
     }
     .light {
         --bg-url: url(assets/bg-desk-white.jpg);
+    }
+}
+
+/*animation*/
+@keyframes slide-in {
+    from {
+    left: 0;
+    }
+    to {
+    left: 50%;
+    }
+}
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
     }
 }
